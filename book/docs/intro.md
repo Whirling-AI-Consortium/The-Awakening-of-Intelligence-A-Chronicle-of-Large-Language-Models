@@ -2,46 +2,25 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 前言
 
-Let's discover **Docusaurus in less than 5 minutes**.
+*奇点时代的我们*
 
-## Getting Started
+当蒸汽机轰鸣着改变世界的时候，没有人意识到那是第一次工业革命的开始；当电灯第一次在门罗公园亮起时，很少有人预见它将彻底重塑人类的生活方式。历史总是以一种近乎残酷的方式提醒我们：身处变革之中的人们，往往看不清自己正站在怎样的历史转折点上。
 
-Get started by **creating a new site**.
+如今，我们同样置身于一场巨变之中。2017年，谷歌大脑团队发表的一篇题为《Attention Is All You Need》的论文，在当时并没有引起太大轰动。这篇提出Transformer架构的论文，引用量在最初几个月相当平庸，甚至没有入选当年NeurIPS的杰出论文奖。论文本身写作风格平淡，缺乏华丽辞藻，主要创新点Transformer架构在当时看来不过是对序列处理的又一种尝试。更具讽刺意味的是，谷歌内部最初并未将其视为重点项目加以推广。没有人——包括作者自己——预见到这个看似普通的技术突破，会在短短几年内引爆一场席卷全球的智能革命。技术史上充满了这样的偶然：最具颠覆性的创新往往以最不起眼的面貌出现，仿佛命运在捉弄那些自诩有先见之明的预言家。
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+正是这篇不起眼的论文，被一个成立仅两年的人工智能研究组织OpenAI看中并进行了关键性应用。2018年，OpenAI基于Transformer架构推出了GPT-1模型，尽管规模仅有1.17亿参数，成绩也不够惊艳，但它开启了一条全新的技术路线。随后，GPT-2的15亿参数规模和GPT-3的1750亿参数飞跃，展示了一个惊人的规律：只要不断增加模型参数和训练数据，AI就能表现出人们此前从未预料到的能力。这是典型的技术演化中的"非连续性"——量变引发质变，阈值突破带来范式转换。人工智能领域的"摩尔定律"被重新定义：不是芯片上的晶体管数量每18个月翻一番，而是模型参数规模每半年到一年时间增长10倍。
 
-### What you'll need
+从参数规模看，大语言模型的发展几乎是狂飙突进：GPT-3的1750亿参数曾让世界震惊，而仅仅三年后，GPT-4的规模就已远超这一数字。更惊人的是，这种规模的扩张伴随着质的飞跃——从简单的文本生成到复杂的推理，从单一的语言理解到多模态交互，大语言模型的能力边界在不断拓展，以至于许多研究者开始认真讨论通用人工智能（AGI）的可能性。
+在硅谷，这场革命的核心舞台上，一批年轻而富有远见的科技精英们正在改写游戏规则。他们中有来自OpenAI的Sam Altman，这位曾被Y Combinator捧为明星的创业导师，在ChatGPT爆发后摇身一变成为了AI时代的领航者；有微软的掌舵人Satya Nadella，这位印度裔CEO以100亿美元的豪赌，为这家老牌科技公司在AI时代赢得了新生；还有NVIDIA的Jensen Huang，这位执着的芯片设计师，凭借对AI算力需求的精准押注，让NVIDIA的市值在短短几年内暴涨数倍，一度超越苹果成为全球最有价值的企业。
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+与此同时，在大洋彼岸的中国，百度、阿里、腾讯等互联网巨头也在紧锣密鼓地布局自己的大模型战略，试图在这场全球竞赛中不落人后。从风口浪尖的北京中关村到深圳南山，无数创业者、工程师和研究员正日以继夜地工作，希望能在这场智能革命中分得一杯羹。
 
-## Generate a new site
+然而，繁荣背后是尖锐的矛盾与冲突。开源阵营与闭源阵营的较量日趋激烈，Meta的开源策略与OpenAI的商业路线形成鲜明对比；算力资源的稀缺与集中引发了关于AI民主化与垄断化的激烈讨论；各国政府也开始警觉，欧盟率先推出AI法案，美国和中国也纷纷出台政策，试图在促进创新与防范风险之间寻找平衡。
 
-Generate a new Docusaurus site using the **classic template**.
+在这场智能的海啸中，每一个行业都将被重塑。华尔街的金融分析师们开始使用大语言模型筛选投资机会；硅谷的程序员们借助Copilot等工具提升编程效率；医生们尝试用AI辅助诊断；律师们使用智能助手梳理浩如烟海的法律文件；甚至作家、艺术家这些最具创造性的职业，也开始思考如何与AI共存共生。
 
-The classic template will automatically be added to your project after you run the command:
+这不仅仅是一场技术革命，更是一场深刻的社会变革。就像两个世纪前蒸汽机彻底改变了人类的生产方式一样，大语言模型也将重塑我们思考、创造和工作的方式。
 
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+本书试图捕捉这场革命的脉络与本质，记录那些关键的技术突破、商业博弈和人物故事，探讨它们对我们每个人的影响。在这个可能被后人称为"奇点时代"的历史节点上，我们既是见证者，也是参与者。理解这场变革，或许是我们面向未来最重要的准备。

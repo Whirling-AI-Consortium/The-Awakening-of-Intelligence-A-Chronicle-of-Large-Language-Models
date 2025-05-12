@@ -2,11 +2,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'My Book Title', // 替换为你的书籍标题
+  tagline: 'My Book Subtitle', // 替换为你的书籍副标题
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -17,8 +15,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'whirling-ai-consortium', // Usually your GitHub org/user name.
-  projectName: 'The-Awakening-of-Intelligence-A-Chronicle-of-Large-Language-Models', // Usually your repo name.
+  organizationName: 'whirling-ai-consortium', // 通常是你的 GitHub 组织或用户名
+  projectName: 'The-Awakening-of-Intelligence-A-Chronicle-of-Large-Language-Models', // 通常是你的仓库名
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -40,22 +38,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+            'https://github.com/whirling-ai-consortium/The-Awakening-of-Intelligence-A-Chronicle-of-Large-Language-Models/edit/main/', // 修改为你的仓库编辑链接
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -68,21 +51,20 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'My Book Title', // 替换为你的书籍标题
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'My Book Logo', // 替换为你的书籍 Logo Alt Text
+        src: 'img/logo.svg', // 替换为你的书籍 Logo 路径
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'tutorialSidebar', // 保持与你的 sidebars.ts 中定义的 sidebarId 一致
           position: 'left',
-          label: 'Tutorial',
+          label: 'Read Book', // 修改导航栏标签
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/whirling-ai-consortium/The-Awakening-of-Intelligence-A-Chronicle-of-Large-Language-Models', // 修改为你的 GitHub 仓库链接
           label: 'GitHub',
           position: 'right',
         },
@@ -92,11 +74,11 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Read',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Introduction', // 修改为你的书籍起始章节
+              to: '/docs/intro', // 修改为你的书籍起始章节路径
             },
           ],
         },
@@ -104,16 +86,8 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'GitHub Discussions', // 可以修改为你的协作讨论平台
+              href: 'https://github.com/whirling-ai-consortium/The-Awakening-of-Intelligence-A-Chronicle-of-Large-Language-Models/discussions', // 修改为你的仓库 Discussions 链接
             },
           ],
         },
@@ -121,17 +95,13 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/whirling-ai-consortium/The-Awakening-of-Intelligence-A-Chronicle-of-Large-Language-Models', // 修改为你的 GitHub 仓库链接
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Whirling AI Consortium. Built with Docusaurus.`, // 修改版权信息
     },
     prism: {
       theme: prismThemes.github,
