@@ -17,15 +17,15 @@ jobs:
           node-version: '18.x' # 或者你使用的 Node.js 版本
 
       - name: Install dependencies
-        run: cd website && npm install # 或者 yarn install
+        run: cd book && npm install # 或者 yarn install
 
       - name: Build website
-        run: cd website && npm run build # 或者 yarn build
+        run: cd book && npm run build # 或者 yarn build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: website/build
+          publish_dir: book/build
           publish_branch: gh-pages
           force_orphan: true
