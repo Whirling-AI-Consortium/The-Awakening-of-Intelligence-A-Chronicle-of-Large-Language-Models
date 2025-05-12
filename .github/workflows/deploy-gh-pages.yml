@@ -1,0 +1,31 @@
+name: Deploy Docusaurus to GitHub Pages
+
+on:
+  push:
+    branches: [main] # 或者你的主分支名称
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x' # 或者你使用的 Node.js 版本
+
+      - name: Install dependencies
+        run: cd website && npm install # 或者 yarn install
+
+      - name: Build website
+        run: cd website && npm run build # 或者 yarn build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: website/build
+          publish_branch: gh-pages
+          force_orphan: true
