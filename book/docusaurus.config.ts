@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Book Title', // 替换为你的书籍标题
-  tagline: 'My Book Subtitle', // 替换为你的书籍副标题
+  title: '智能的觉醒', // 替换为你的书籍标题
+  tagline: '大语言模型发展编年史', // 替换为你的书籍副标题
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -51,7 +51,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Book Title', // 替换为你的书籍标题
+      title: '主页', // 替换为你的书籍标题
       logo: {
         alt: 'My Book Logo', // 替换为你的书籍 Logo Alt Text
         src: 'img/logo.svg', // 替换为你的书籍 Logo 路径
