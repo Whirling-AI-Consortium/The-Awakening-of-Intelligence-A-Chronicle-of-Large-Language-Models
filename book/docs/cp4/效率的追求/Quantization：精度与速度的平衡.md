@@ -16,7 +16,7 @@ sidebar_position: 2
 
 ## 量化的基本原理
 
-量化的核心思想是用少量bit表示原本需要更多bit的数值。最直接的形式是**均匀量化（Uniform Quantization）**。给定一个浮点范围 $[x_{\min}, x_{\max}]$ 和一个目标bit宽度 $b$，我们将范围映射到 $[0, 2^b - 1]$ 的整数空间：
+量化的核心思想是用少量bit表示原本需要更多bit的数值。最直接的形式是**均匀量化（Uniform Quantization）**。给定一个浮点范围 $[x_{\min}, x_{\max}]$ 和一个目标bit宽度 $b$，接着将范围映射到 $[0, 2^b - 1]$ 的整数空间：
 
 $$x_q = \text{round}\left(\frac{x - x_{\min}}{x_{\max} - x_{\min}} \times (2^b - 1)\right)$$
 
@@ -38,7 +38,7 @@ PTQ的优点是简单易用。它可以应用于任何预训练模型，无需�
 
 **量化感知训练（Quantization-Aware Training, QAT）**是一个更复杂但更有效的方法。在训练过程中，模型学会如何适应量化。具体地，前向传播中应用量化，反向传播中计算梯度相对于量化参数的导数。关键的技术是**直通估计子（Straight-Through Estimator, STE）**。在量化操作中使用STE允许梯度通过，即使量化操作本身不可微。
 
-数学上，如果量化操作是 $Q(x)$，那么标准的导数是不存在的或为零。但使用STE，我们定义：
+数学上，如果量化操作是 $Q(x)$，那么标准的导数是不存在的或为零。但使用STE，定义：
 
 $$\frac{\partial Q(x)}{\partial x} = 1 \quad \text{if} \quad x \in [x_{\min}, x_{\max}], \quad 0 \quad \text{otherwise}$$
 
@@ -88,7 +88,7 @@ $$\frac{\partial Q(x)}{\partial x} = 1 \quad \text{if} \quad x \in [x_{\min}, x_
 
 ## 与其他效率技术的互补性
 
-量化与我们已经讨论的其他效率技术（LoRA、FlashAttention）是互补的。
+量化与已经讨论的其他效率技术（LoRA、FlashAttention）是互补的。
 
 与LoRA的结合：LoRA微调通常应用于完整精度模型。但当与量化结合时（如QLORA），可以在量化模型上进行有效的微调。这使得对资源约束环境中的模型进行定制变得可行。
 

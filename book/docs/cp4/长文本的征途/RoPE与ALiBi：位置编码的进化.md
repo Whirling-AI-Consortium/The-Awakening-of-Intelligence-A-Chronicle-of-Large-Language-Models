@@ -35,7 +35,7 @@ $$R_\theta^m = \begin{pmatrix} \cos(m\theta) & -\sin(m\theta) \\ \sin(m\theta) &
 
 换言之，RoPE让Attention自然地"看到"相对位置，而不是绝对位置。这在数学上是严密的：两个经过RoPE变换的向量之间的点积天然地反映了它们的相对距离。RoPE还具有一个特殊的性质——它对旋转不变性的完美处理，使得模型的Attention权重与绝对坐标系统无关，完全取决于相对关系。
 
-从工程实现的角度，RoPE相当优雅。假设向量维度为$d$，我们将其分解为$d/2$对维度，对每一对应用旋转：
+从工程实现的角度，RoPE相当优雅。假设向量维度为$d$，接着将其分解为$d/2$对维度，对每一对应用旋转：
 
 ```python
 def apply_rotary_pos_emb(x, freqs):
